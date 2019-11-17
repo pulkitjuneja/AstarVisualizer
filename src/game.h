@@ -35,14 +35,14 @@ void Game::render()
 }
 void Game::run()
 {
-	sf::Event ev;
+	sf::Event event;
 	while (window->isOpen())
 	{
-		while(window->pollEvent(ev))
+		while(window->pollEvent(event))
 		{
-			if (ev.type == sf::Event::KeyPressed)
+			if (event.type == sf::Event::KeyPressed)
 			{
-				if (ev.key.code == sf::Keyboard::P)
+				if (event.key.code == sf::Keyboard::P)
 				{
 					playing = !playing;
 				}
